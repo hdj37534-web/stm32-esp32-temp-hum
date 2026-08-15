@@ -1,4 +1,4 @@
-# STM32 + ESP32 温湿度监控系统
+# STM32 + ESP32 + Onenet MQTT + uniapp 温湿度监控系统
 
 基于 STM32F103C8T6、DHT11、SSD1306 OLED 和 ESP32-WROOM-32 的温湿度监控课设项目。
 
@@ -61,6 +61,9 @@ Output/                      STM32 编译输出
 ```
 
 ## 烧录与运行
+
+如果要移植，很麻烦，需要把WIFI改成自家的，要在onenet注册新设备，并修改stm32，ESP32，uniapp里面通信的部分
+建议观看教程【保姆级教程！STM32+ESP8266+Onenet云平台+微信小程序实战｜STM32物联网系统设计万能框架(以STM32温湿度采集系统为例)-哔哩哔哩】文档教学 www.mdprojects.cn
 
 ### 1. STM32
 
@@ -148,15 +151,7 @@ AA 55 Type Length Payload Checksum
 
 `flags` 位定义：bit0 为 `Alarm`，bit1 为 `Led`。
 
-## 联调检查
-
-1. STM32 OLED 是否能每 2 秒更新温湿度，且不整屏闪烁。
-2. 调低本地阈值，确认蜂鸣器在温度或湿度高于阈值时响起。
-3. ESP32 串口是否出现 UART 状态帧、MQTT 连接与属性上报日志。
-4. OneNET 控制台是否显示设备在线，以及 `Temp`、`Hum`、`Alarm`、`Led` 的最新值。
-5. 在 APP 分别控制 LED 和 Alarm，确认硬件动作且 APP 不出现“设备响应超时”。
-
-## 注意事项
+## 容易发生的错误
 
 - WiFi 密码、OneNET MQTT Token 和 APP 授权信息属于敏感配置，不应提交到公开仓库。
 - APP 返回 HTTP 200 但提示 `10411`，通常表示 OneNET 未收到设备对 `property/set` 的 MQTT 确认报文；检查 ESP32 是否订阅了 `property/set` 并向 `property/set_reply` 回复相同的 `id`。
