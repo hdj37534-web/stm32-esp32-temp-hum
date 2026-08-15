@@ -63,7 +63,9 @@ Output/                      STM32 编译输出
 ## 烧录与运行
 
 如果要移植，很麻烦，需要把WIFI改成自家的，要在onenet注册新设备，并修改stm32，ESP32，uniapp里面通信的部分
-建议观看教程【保姆级教程！STM32+ESP8266+Onenet云平台+微信小程序实战｜STM32物联网系统设计万能框架(以STM32温湿度采集系统为例)-哔哩哔哩】文档教学 www.mdprojects.cn
+建议观看教程
+【保姆级教程！STM32+ESP8266+Onenet云平台+微信小程序实战｜STM32物联网系统设计万能框架(以STM32温湿度采集系统为例)-哔哩哔哩】 https://b23.tv/yf07rir
+文档教学 www.mdprojects.cn
 
 ### 1. STM32
 
