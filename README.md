@@ -28,6 +28,8 @@ DHT11 / Keys / OLED / Buzzer / LED
 ```
 
 ## 硬件连接
+<img width="3072" height="4096" alt="dbe46f6f7f5d402aeaa6f08b5535fc1b" src="https://github.com/user-attachments/assets/cc332754-7b85-4ec3-84ae-1a7a775880bb" />
+<img width="3072" height="4096" alt="eeee3d85f38d3a154e943d59cb073a4b" src="https://github.com/user-attachments/assets/9b7aad21-ef37-4d79-92ae-51f9c0bf9914" />
 
 | 模块 | STM32 引脚 | 说明 |
 | --- | --- | --- |
